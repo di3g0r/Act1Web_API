@@ -1,0 +1,2 @@
+WALLET_LOCATION = (SOURCE = (METHOD = FILE) (METHOD_DATA = (DIRECTORY = "C:/Users/diego/OneDrive/Escritorio/Universidad/6to Semestre/Web/Periodo2/Act1/LibraryApi/LibraryManagement/Act1_wallet")))
+SSL_SERVER_DN_MATCH = yes
