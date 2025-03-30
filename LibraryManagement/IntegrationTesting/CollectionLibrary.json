@@ -8,72 +8,152 @@
     },  
     "item": [  
         {  
-            "name": "Get All Books",  
-            "request": {  
-                "method": "GET",  
-                "header": [],  
-                "url": "http://localhost:8080/api/books",  
-                "description": "Retrieve a list of all books."  
-            },  
-            "response": []  
-        },  
-        {  
-            "name": "Get Book By ID",  
-            "request": {  
-                "method": "GET",  
-                "header": [],  
-                "url": "http://localhost:8080/api/books/:id",  
-                "description": "Retrieve a book by its ID."  
-            },  
-            "response": []  
-        },  
-        {  
-            "name": "Create Book",  
-            "request": {  
-                "method": "POST",  
-                "header": [  
-                    {  
-                        "key": "Content-Type",  
-                        "value": "application/json"  
-                    }  
-                ],  
-                "body": {  
-                    "mode": "raw",  
-                    "raw": "{\"title\":\"Book Title\",\"author\":\"Author Name\",\"isbn\":\"ISBN Number\",\"publicationYear\":2023,\"genre\":\"Genre\",\"pages\":300}"  
+            "name": "Books",
+            "item": [
+                {  
+                    "name": "Get All Books",  
+                    "request": {  
+                        "method": "GET",  
+                        "header": [],  
+                        "url": "http://localhost:8080/api/books",  
+                        "description": "Retrieve a list of all books."  
+                    },  
+                    "response": []  
                 },  
-                "url": "http://localhost:8080/api/books",  
-                "description": "Create a new book."  
-            },  
-            "response": []  
-        },  
-        {  
-            "name": "Update Book",  
-            "request": {  
-                "method": "PUT",  
-                "header": [  
-                    {  
-                        "key": "Content-Type",  
-                        "value": "application/json"  
-                    }  
-                ],  
-                "body": {  
-                    "mode": "raw",  
-                    "raw": "{\"title\":\"Updated Book Title\",\"author\":\"Updated Author Name\",\"isbn\":\"Updated ISBN Number\",\"publicationYear\":2024,\"genre\":\"Updated Genre\",\"pages\":400}"  
+                {  
+                    "name": "Get Book By ID",  
+                    "request": {  
+                        "method": "GET",  
+                        "header": [],  
+                        "url": "http://localhost:8080/api/books/:id",  
+                        "description": "Retrieve a book by its ID."  
+                    },  
+                    "response": []  
                 },  
-                "url": "http://localhost:8080/api/books/:id",  
-                "description": "Update a book by its ID."  
-            },  
-            "response": []  
-        },  
-        {  
-            "name": "Delete Book",  
-            "request": {  
-                "method": "DELETE",  
-                "header": [],  
-                "url": "http://localhost:8080/api/books/:id",  
-                "description": "Delete a book by its ID."  
-            },  
-            "response": []  
-        }  
+                {  
+                    "name": "Create Book",  
+                    "request": {  
+                        "method": "POST",  
+                        "header": [  
+                            {  
+                                "key": "Content-Type",  
+                                "value": "application/json"  
+                            }  
+                        ],  
+                        "body": {  
+                            "mode": "raw",  
+                            "raw": "{\"title\":\"Book Title\",\"author\":\"Author Name\",\"isbn\":\"ISBN Number\",\"publicationYear\":2023,\"genre\":\"Genre\",\"pages\":300}"  
+                        },  
+                        "url": "http://localhost:8080/api/books",  
+                        "description": "Create a new book."  
+                    },  
+                    "response": []  
+                },  
+                {  
+                    "name": "Update Book",  
+                    "request": {  
+                        "method": "PUT",  
+                        "header": [  
+                            {  
+                                "key": "Content-Type",  
+                                "value": "application/json"  
+                            }  
+                        ],  
+                        "body": {  
+                            "mode": "raw",  
+                            "raw": "{\"title\":\"Updated Book Title\",\"author\":\"Updated Author Name\",\"isbn\":\"Updated ISBN Number\",\"publicationYear\":2024,\"genre\":\"Updated Genre\",\"pages\":400}"  
+                        },  
+                        "url": "http://localhost:8080/api/books/:id",  
+                        "description": "Update a book by its ID."  
+                    },  
+                    "response": []  
+                },  
+                {  
+                    "name": "Delete Book",  
+                    "request": {  
+                        "method": "DELETE",  
+                        "header": [],  
+                        "url": "http://localhost:8080/api/books/:id",  
+                        "description": "Delete a book by its ID."  
+                    },  
+                    "response": []  
+                }
+            ],
+            "description": "Endpoints for managing books in the library"
+        },
+        {
+            "name": "Patrons",
+            "item": [
+                {
+                    "name": "Get All Patrons",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": "http://localhost:8080/api/patrons",
+                        "description": "Retrieve a list of all patrons."
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Patron By ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": "http://localhost:8080/api/patrons/:id",
+                        "description": "Retrieve a patron by their ID."
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Patron",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"phone\": \"123-456-7890\",\n    \"address\": \"123 Main St, Anytown, USA\"\n}"
+                        },
+                        "url": "http://localhost:8080/api/patrons",
+                        "description": "Create a new patron."
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Patron",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"john.updated@example.com\",\n    \"phone\": \"987-654-3210\",\n    \"address\": \"456 Oak St, Newtown, USA\"\n}"
+                        },
+                        "url": "http://localhost:8080/api/patrons/:id",
+                        "description": "Update a patron by their ID."
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Patron",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": "http://localhost:8080/api/patrons/:id",
+                        "description": "Delete a patron by their ID."
+                    },
+                    "response": []
+                }
+            ],
+            "description": "Endpoints for managing patrons who borrow books from the library"
+        }
     ]  
-}  
+}
